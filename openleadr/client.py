@@ -1178,7 +1178,7 @@ class OpenADRClient:
 
     async def _on_report_update(self, response_payload):
         for report_update in response_payload['reports']:
-            await self.on_report(report_update)
+            await self.on_report_update(report_update)
         message = self._create_message('oadrUpdatedReport',
                                        ven_id=self.ven_id,
                                        response= {
